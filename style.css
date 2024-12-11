@@ -68,6 +68,58 @@ a:hover {
     transform: translateY(-50%);
 }
 
+/* Contenedor principal */
+#parallaxs {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* Capa con la imagen de fondo borrosa */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("assets/images/blog1.jpg") fixed;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) blur(5px);
+    z-index: 1;
+}
+
+/* Texto superpuesto centrado */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(0, 140, 255);
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Opcional: Responsividad */
+@media screen and (max-width: 768px) {
+    .overlay-text {
+        font-size: 2rem;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .overlay-text {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+}
+
+
 
 /* */
 @media only screen and (max-width: 991px) {

@@ -13,6 +13,7 @@
       <link rel="stylesheet" type="text/css" href="assets/css/temas_plugin.css"/>
       <link rel="stylesheet" type="text/css" href="style.css"/>
       <link rel="stylesheet" type="text/css" href="assets/css/responsive.css"/>
+      <link rel="stylesheet" type="text/css" href="assets/css/lightbox.css"/>
       
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css" rel="stylesheet">
@@ -95,7 +96,6 @@
                                        <li><a href="#Team">Team</a></li>
                                     </ul>
                                  </li>
-                                 <li><a href="#about-us">Contact</a></li>
                               </ul>
                            </nav>
                            <div class="main-search-menu">
@@ -128,7 +128,7 @@
 
                            <!-- menu button -->
                            <div class="donate-btn-header">
-                              <a class="dtbtn" onclick="openEmailModal()" href="#">Get A Quote</a>
+                              <a class="dtbtn" onclick="openEmailModal()" href="#">Contact</a>
                             </div>
 
                             <div id="emailModal" class="modal" style="display: none;">
@@ -208,12 +208,10 @@
                         <li><a href="#Team">Team</a></li>
                      </ul>
                   </li>
-                  <li><a href="#about-us">Contact</a></li>
                   <li>
-
                      
                      <div class="quote-btn-container">
-                        <a id="getAQuoteButton" class="get-quote-btn" href="#">Get A Quote</a>
+                        <a id="getAQuoteButton" class="get-quote-btn" href="#">Contact</a>
                      </div>
                      <div id="contactModal" class="modal-content">
                          <div class="contact-modal-content">
@@ -274,7 +272,8 @@
                         </div>
                      </div>
                   </div>
-               </div>               <div class="swiper-slide d1 t1 m1 witr_swiper_height" style="background-image: url(assets/images/slider1.png);">
+               </div>
+               <div class="swiper-slide d1 t1 m1 witr_swiper_height" style="background-image: url(assets/images/slider1.png);">
                   <div class="witr_sw_text_area text-left">
                      <div class="witr_swiper_content ">
                         <h2>IT solution Company</h2>
@@ -301,6 +300,90 @@
             <div class="swiper-button-prev"></div>
          </div>
       </div>
+
+      <br>
+      <br>
+
+<!-- Images used to open the lightbox -->
+<div class="lightbox-row">
+   <div class="lightbox-column">
+     <img src="assets/images/team1.jpg" onclick="openLightbox();currentLightboxSlide(1)" class="lightbox-hover-shadow">
+   </div>
+   <div class="lightbox-column">
+     <img src="assets/images/team2.jpg" onclick="openLightbox();currentLightboxSlide(2)" class="lightbox-hover-shadow">
+   </div>
+   <div class="lightbox-column">
+     <img src="assets/images/team3.jpg" onclick="openLightbox();currentLightboxSlide(3)" class="lightbox-hover-shadow">
+   </div>
+   <div class="lightbox-column">
+     <img src="assets/images/team4.jpg" onclick="openLightbox();currentLightboxSlide(4)" class="lightbox-hover-shadow">
+   </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="lightboxModal" class="lightbox-modal">
+   <span class="lightbox-close cursor" onclick="closeLightbox()">&times;</span>
+
+   <div class="lightbox-modal-content">
+     <div class="lightbox-slide">
+       <div class="lightbox-numbertext">1 / 4</div>
+       <img src="assets/images/team1.jpg" style="width:100%">
+     </div>
+
+     <div class="lightbox-slide">
+       <div class="lightbox-numbertext">2 / 4</div>
+       <img src="assets/images/team2.jpg" style="width:100%">
+     </div>
+
+     <div class="lightbox-slide">
+       <div class="lightbox-numbertext">3 / 4</div>
+       <img src="assets/images/team3.jpg" style="width:100%">
+     </div>
+
+     <div class="lightbox-slide">
+       <div class="lightbox-numbertext">4 / 4</div>
+       <img src="assets/images/team4.jpg" style="width:100%">
+     </div>
+
+     <!-- Next/previous controls -->
+     <a class="lightbox-prev" onclick="plusLightboxSlides(-1)">&#10094;</a>
+     <a class="lightbox-next" onclick="plusLightboxSlides(1)">&#10095;</a>
+
+     <!-- Caption text -->
+     <div class="lightbox-caption-container">
+       <p id="lightboxCaption"></p>
+     </div>
+
+     <!-- Thumbnail image controls -->
+     <div class="lightbox-column">
+       <img class="lightbox-demo" src="assets/images/team1.jpg" onclick="currentLightboxSlide(1)" alt="Team 1">
+     </div>
+
+     <div class="lightbox-column">
+       <img class="lightbox-demo" src="assets/images/team2.jpg" onclick="currentLightboxSlide(2)" alt="Team 2">
+     </div>
+
+     <div class="lightbox-column">
+       <img class="lightbox-demo" src="assets/images/team3.jpg" onclick="currentLightboxSlide(3)" alt="Team 3">
+     </div>
+
+     <div class="lightbox-column">
+       <img class="lightbox-demo" src="assets/images/team4.jpg" onclick="currentLightboxSlide(4)" alt="Team 4">
+     </div>
+   </div>
+</div>
+
+
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+
+
       <div class="nupur_feature_area">
          <div class="container">
             <div class="row service_inner">
@@ -374,6 +457,17 @@
             </div>
          </div>
       </div>
+
+      <div>
+         <div id="parallaxs">
+           <div class="background-image"></div>
+           <h1 class="overlay-text">SERVICES</h1>
+         </div>
+       </div>
+       
+       
+
+
       <div id="Our-Service" class="nupur_service_area">
          <div class="container">
             <div class="row">
@@ -462,6 +556,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-lg-4 col-md-6">
                   <div class="em-service2 sleft all_color_service">
                      <div class="em_service_content ">
@@ -1589,5 +1684,6 @@
       <script src="assets/js/cuadro.js"></script>
       <script src="assets/js/datocel.js"></script>
       <script src="assets/js/datocelmovil.js"></script>
+      <script src="assets/js/lightbox.js"></script>
    </body>
 </html>
